@@ -237,3 +237,25 @@ border-top:1px solid #222;
 color:#777;
 
 }
+
+
+.screen{
+
+width:100%;
+
+border-radius:15px;
+
+border:1px solid #333;
+
+margin-bottom:15px;
+
+transition:.3s;
+
+}
+
+
+.screen:hover{
+
+transform:scale(1.03);
+
+}

@@ -1,15 +1,23 @@
-console.log("KnightCore website loaded");
+console.log("KnightCore loaded");
 
-const buttons = document.querySelectorAll(".btn");
 
-buttons.forEach(button => {
+const cards = document.querySelectorAll(".card");
 
-button.addEventListener("mouseenter", () => {
-    button.style.transform="scale(1.05)";
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px)";
+
 });
 
-button.addEventListener("mouseleave", () => {
-    button.style.transform="scale(1)";
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0)";
+
 });
+
 
 });

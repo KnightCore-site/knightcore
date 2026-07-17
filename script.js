@@ -1,23 +1,28 @@
-console.log("KnightCore loaded");
+const elements = document.querySelectorAll(".hidden");
 
 
-const cards = document.querySelectorAll(".card");
+const observer = new IntersectionObserver(entries=>{
 
 
-cards.forEach(card=>{
+entries.forEach(entry=>{
 
-card.addEventListener("mouseenter",()=>{
 
-card.style.transform="translateY(-10px)";
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
 
 });
 
 
-card.addEventListener("mouseleave",()=>{
-
-card.style.transform="translateY(0)";
-
 });
 
+
+
+elements.forEach(element=>{
+
+observer.observe(element);
 
 });

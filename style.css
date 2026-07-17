@@ -15,7 +15,6 @@ color:white;
 
 
 
-
 header{
 
 height:100vh;
@@ -28,8 +27,6 @@ align-items:center;
 text-align:center;
 
 padding:20px;
-
-animation:show 1.2s ease;
 
 }
 
@@ -44,61 +41,24 @@ object-fit:contain;
 
 animation:float 3s infinite ease-in-out;
 
-filter:drop-shadow(0 0 20px #ffffff33);
-
 }
 
 
 
 @keyframes float{
 
-0%{
-transform:translateY(0);
-}
-
 50%{
 transform:translateY(-15px);
 }
 
-100%{
-transform:translateY(0);
 }
-
-}
-
-
-
-
-@keyframes show{
-
-from{
-
-opacity:0;
-transform:translateY(50px);
-
-}
-
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
 
 
 
 h1{
 
 font-size:70px;
-
-margin:25px 0;
-
-letter-spacing:3px;
+margin:25px;
 
 }
 
@@ -107,11 +67,9 @@ letter-spacing:3px;
 header p{
 
 font-size:22px;
-
 color:#aaa;
 
 }
-
 
 
 
@@ -123,8 +81,9 @@ margin-top:40px;
 
 
 
-
 .btn{
+
+display:inline-block;
 
 padding:15px 35px;
 
@@ -135,8 +94,6 @@ border-radius:12px;
 text-decoration:none;
 
 font-weight:bold;
-
-display:inline-block;
 
 transition:.3s;
 
@@ -155,7 +112,6 @@ transform:scale(1.08);
 .download{
 
 background:white;
-
 color:black;
 
 }
@@ -165,7 +121,6 @@ color:black;
 .discord{
 
 border:2px solid white;
-
 color:white;
 
 }
@@ -186,12 +141,11 @@ padding:80px 20px;
 
 
 
-
 h2{
 
 font-size:40px;
 
-margin-bottom:25px;
+margin-bottom:30px;
 
 }
 
@@ -209,7 +163,6 @@ line-height:1.7;
 
 
 
-
 .cards{
 
 display:grid;
@@ -219,7 +172,6 @@ grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:25px;
 
 }
-
 
 
 
@@ -239,12 +191,35 @@ transition:.3s;
 
 
 
-
 .card:hover{
 
 transform:translateY(-10px);
 
 border-color:white;
+
+}
+
+
+
+
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
 
 }
 
@@ -260,30 +235,5 @@ padding:30px;
 border-top:1px solid #222;
 
 color:#777;
-
-}
-
-
-
-
-
-@media(max-width:700px){
-
-
-h1{
-
-font-size:45px;
-
-}
-
-
-.logo img{
-
-width:130px;
-
-height:130px;
-
-}
-
 
 }

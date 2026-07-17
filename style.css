@@ -2,116 +2,288 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 
-body {
-    background: #050505;
-    color: white;
+body{
+
+background:#050505;
+color:white;
+
 }
+
+
 
 
 header{
+
 height:100vh;
+
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+
 text-align:center;
-background:
-radial-gradient(circle,#333,#050505 70%);
+
 padding:20px;
+
+animation:show 1.2s ease;
+
 }
 
 
-.logo{
-font-size:100px;
+
+.logo img{
+
+width:180px;
+height:180px;
+
+object-fit:contain;
+
+animation:float 3s infinite ease-in-out;
+
+filter:drop-shadow(0 0 20px #ffffff33);
+
 }
+
+
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
 
 
 h1{
+
 font-size:70px;
-margin:20px;
+
+margin:25px 0;
+
+letter-spacing:3px;
+
 }
+
 
 
 header p{
+
 font-size:22px;
+
 color:#aaa;
+
 }
+
+
 
 
 .buttons{
+
 margin-top:40px;
+
 }
+
+
 
 
 .btn{
-padding:15px 30px;
+
+padding:15px 35px;
+
 margin:10px;
+
 border-radius:12px;
+
 text-decoration:none;
+
 font-weight:bold;
+
 display:inline-block;
+
+transition:.3s;
+
 }
+
+
+
+.btn:hover{
+
+transform:scale(1.08);
+
+}
+
 
 
 .download{
+
 background:white;
+
 color:black;
+
 }
+
 
 
 .discord{
+
 border:2px solid white;
+
 color:white;
+
 }
+
+
+
 
 
 section{
+
 max-width:1100px;
+
 margin:auto;
+
 padding:80px 20px;
+
 }
+
+
 
 
 h2{
+
 font-size:40px;
+
 margin-bottom:25px;
+
 }
+
 
 
 p{
-font-size:18px;
-line-height:1.6;
+
 color:#ccc;
+
+font-size:18px;
+
+line-height:1.7;
+
 }
+
+
 
 
 .cards{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
 gap:25px;
+
 }
+
+
 
 
 .card{
+
 background:#111;
+
 border:1px solid #333;
-padding:25px;
-border-radius:15px;
+
+padding:30px;
+
+border-radius:18px;
+
+transition:.3s;
+
 }
+
+
 
 
 .card:hover{
-transform:translateY(-8px);
-transition:.3s;
+
+transform:translateY(-10px);
+
+border-color:white;
+
 }
 
 
+
+
 footer{
+
 text-align:center;
+
 padding:30px;
+
+border-top:1px solid #222;
+
 color:#777;
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+h1{
+
+font-size:45px;
+
+}
+
+
+.logo img{
+
+width:130px;
+
+height:130px;
+
+}
+
+
 }

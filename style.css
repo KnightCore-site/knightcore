@@ -387,3 +387,13 @@ width:100%;
 }
 
 }
+
+#loader.fade-out{
+
+opacity:0;
+
+filter:blur(8px);
+
+pointer-events:none;
+
+}

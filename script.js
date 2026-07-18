@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        loader.style.opacity = "0";
+        loader.classList.add("fade-out");
 
         setTimeout(() => {
 
